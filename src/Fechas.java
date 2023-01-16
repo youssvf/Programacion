@@ -4,13 +4,12 @@ import java.time.Period;
 import java.time.LocalDate;
 import java.time.temporal.ChronoUnit;
 import java.util.Scanner;
+import java.util.Calendar;
 
 public class Fechas {
 
     public static void main(String[] args) {
 
-        DayOfWeek diaSemana = LocalDate.of(2023,Month.JANUARY,11).getDayOfWeek();
-        System.out.println(diaSemana);
 
         LocalDate hoy = LocalDate.now();
         LocalDate cumple = LocalDate.of(2004,Month.SEPTEMBER,9);
@@ -24,8 +23,13 @@ public class Fechas {
         LocalDate fechaOriginal = LocalDate.parse(fechaIntroducida);
 
         System.out.println(fechaOriginal.getDayOfWeek());
-        Period Cien = ChronoUnit.DAYS.between(fechaCienDias, fechaOriginal);
-        LocalDate fechaCienDias = fechaOriginal+100;
+        
+        long Cien = ChronoUnit.DAYS.between(cumple, fechaOriginal);
+        System.out.println(Cien);
+
+
+
+
 
     }
 }
