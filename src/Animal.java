@@ -7,12 +7,17 @@ public class Animal {
     private boolean estalimpio;
     public double cantidad;
 
-    public Animal() {
+    public Animal(String nombre, double peso, Sexo sexo, boolean enfermo, boolean estaLimpio, double cantidad) {
         this.nombre= nombre;
         this.peso = peso;
         this.sexo = sexo;
         this.enfermo = enfermo;
         this.estalimpio = estalimpio;
+        this.cantidad= cantidad;
+        this.alimentar(2);
+        this.revision();
+        this.mantenimiento = mantenimiento;
+        this.reproducir= reproducir;
     }
 
     public void setNombre(String nombre) {
@@ -43,6 +48,18 @@ public class Animal {
         return cantidad;
     }
 
+    public String getNombre() {
+        return nombre;
+    }
+
+    public Sexo getSexo() {
+        return sexo;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
     public boolean alimentar(double cantidad){
         if(enfermo == true){
             System.out.println("Está enfermo");
@@ -64,5 +81,12 @@ public class Animal {
     }
     public boolean mantenimiento;
     public boolean reproducir;
+
+    @Override
+    public String toString(){
+        String salida;
+        salida = "Este animal se llama " + nombre + ", pesa " + peso + " kg y su sexo es "+ sexo ;
+        return salida;
+    }
 
 }
