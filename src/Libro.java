@@ -15,6 +15,13 @@ public class Libro extends Publicacion implements Prestable{
         return entrada;
     }
 
+    public Boolean getDisponible() {
+        return disponible;
+    }
+
+    public String getPrestado() {
+        return prestado;
+    }
 
     public void prestar() {
         disponible=true;
