@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
+public class UsoPublicaciones {
     public static void main(String[] args) {
         ArrayList<Publicacion> publicaciones = new ArrayList<>();
 
@@ -26,7 +26,7 @@ public class Main {
         int año = sc.nextInt();
         int publisanteriores=0;
         for(Publicacion a:publicaciones){
-            if(a.getAñoPublicacion()<año){
+            if(a.getAñoPublicacion()<=año){
                 publisanteriores++;
             }
         }
